@@ -38,6 +38,8 @@ TARGET_CPU_VARIANT := krait
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=NULL,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 vmalloc=260M loglevel=0
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
@@ -70,7 +72,7 @@ QCOM_BT_USE_SMD_TTY := true
 TARGET_USE_COMPAT_GRALLOC_ALIGN := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
-TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS:= true
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -155,10 +157,10 @@ BOARD_USES_QC_TIME_SERVICES := true
 TARGET_NO_RPC := true
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+# include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += \
-    $(COMMON_PATH)/sepolicy
+# BOARD_SEPOLICY_DIRS += \
+#    $(COMMON_PATH)/sepolicy
 
 # Sensor Compat
 BOARD_GLOBAL_CFLAGS += -DCOMPAT_SENSORS_M
