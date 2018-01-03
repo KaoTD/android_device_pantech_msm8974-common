@@ -106,7 +106,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 # SDClang
 TARGET_USE_SDCLANG := true
