@@ -146,9 +146,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf
 
-# HIDL
-DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
-
 # IPv6
 PRODUCT_PACKAGES += \
     ebtables \
