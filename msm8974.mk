@@ -70,6 +70,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version.xml
 
+# APN
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/acdb/MTP_Bluetooth_cal.acdb:system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
