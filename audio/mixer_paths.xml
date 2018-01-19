@@ -19,7 +19,7 @@
     <ctl name="Voip Evrc Min Max Rate Config" id="0" value="1" />
     <ctl name="Voip Evrc Min Max Rate Config" id="1" value="4" />
     <ctl name="Voip Dtx Mode" value="0" />
-    <ctl name="TTY Mode" value="Off" />
+    <ctl name="TTY Mode" value="OFF" />
     <ctl name="LINEOUT1 Volume" value="13" />
     <ctl name="LINEOUT2 Volume" value="13" />
     <ctl name="LINEOUT3 Volume" value="13" />
@@ -32,7 +32,7 @@
     <ctl name="RX4 Digital Volume" value="87" />
     <ctl name="RX5 Digital Volume" value="87" />
     <ctl name="RX6 Digital Volume" value="87" />
-    <ctl name="RX7 Digital Volume" value="86" />
+    <ctl name="RX7 Digital Volume" value="87" />
     <ctl name="ADC1 Volume" value="19" />
     <ctl name="ADC2 Volume" value="12" />
     <ctl name="ADC3 Volume" value="12" />
@@ -40,10 +40,10 @@
     <ctl name="ADC5 Volume" value="12" />
     <ctl name="ADC6 Volume" value="19" />
     <ctl name="DEC1 Volume" value="84" />
-    <ctl name="DEC2 Volume" value="83" />
-    <ctl name="DEC3 Volume" value="83" />
-    <ctl name="DEC4 Volume" value="83" />
-    <ctl name="DEC5 Volume" value="83" />
+    <ctl name="DEC2 Volume" value="84" />
+    <ctl name="DEC3 Volume" value="84" />
+    <ctl name="DEC4 Volume" value="84" />
+    <ctl name="DEC5 Volume" value="84" />
     <ctl name="DEC6 Volume" value="84" />
     <ctl name="DEC7 Volume" value="84" />
     <ctl name="DEC8 Volume" value="84" />
@@ -898,7 +898,12 @@
     </path>
 
     <path name="voice-speaker-mic">
-        <path name="speaker-mic" />
+        <ctl name="AIF1_CAP Mixer SLIM TX8" value="1" />
+        <ctl name="SLIM_0_TX Channels" value="One" />
+        <ctl name="SLIM TX8 MUX" value="DEC3" />
+        <ctl name="DEC3 MUX" value="ADC4" />
+        <ctl name="DEC3 Volume" value="84" />
+        <ctl name="ADC4 Volume" value="12" />  
     </path>
 
     <path name="voice-headphones">
